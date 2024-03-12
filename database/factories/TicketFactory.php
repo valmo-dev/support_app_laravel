@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Statut;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -21,6 +22,7 @@ class TicketFactory extends Factory
             'title' => $this->faker->sentence(3),
             'description' => $this->faker->paragraph,
             'user_id' => User::factory(),
+            'statut_id' => Statut::factory()->create()->id,
         ];
     }
 }
