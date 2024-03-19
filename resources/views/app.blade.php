@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="fr" data-theme="lofi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +54,10 @@
             <a href="{{ route('statuts.index') }}" class="link link-hover">Liste des status</a>
         </nav>
         <aside>
-            <p>Copyright © {{ date("Y") }} - Tous droits réservé.</p>
+            @php
+                $date = date('Y');
+            @endphp
+            <p>Copyright © {{ $date }} - Tous droits réservé.</p>
         </aside>
     </footer>
 
